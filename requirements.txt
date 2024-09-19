@@ -4,3 +4,4 @@ numpy==1.26
 python-dotenv==1.0.1
 requests==2.32.3
 SQLAlchemy==2.0.34
+PyMySQL

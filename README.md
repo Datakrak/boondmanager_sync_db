@@ -2,4 +2,7 @@
 # author : Jeremy-Jordan MOZIN
 # mail : jeremy@kraken.tf
 
-Pour installer l'app, exécuter la commande : pip install -r requirements.txt
+Python script used to save Boondmanager data into a MySQL database. 
+Use :
+pip install -r requirements.py
+python3 app.py

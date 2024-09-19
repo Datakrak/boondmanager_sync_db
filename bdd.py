@@ -11,16 +11,20 @@ DB_USER=os.getenv('DB_USER')
 DB_PWD=os.getenv('DB_PWD')
 DB_NAME=os.getenv('DB_NAME')
 
-#db_url = f"jdbc:mysql://{DB_IP}:3306/{DB_NAME}?user={DB_USER}&password={DB_PWD}&useSSL=false"
 db_url = f"mysql+pymysql://{DB_USER}:{DB_PWD}@{DB_IP}:3306/{DB_NAME}"
 
 engine = create_engine(db_url)
 
 
+def init_db():
+
+    Base.metadata.create_all(bind=engine)
+
+    return 0
+
 
 try:
-
-    #Base.metadata.drop_all(bind=engine)
+    Base.metadata.drop_all(bind=engine)
 
     Base.metadata.create_all(bind=engine)
 
